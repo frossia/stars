@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@import "compass";
+
+.afisha_month {
+  //float: left;
+  text-align: left;
+  font-size: 18px;
+  padding: 5px 0 0 10px;
+  text-transform:uppercase;
+}
+
+.afisha_date {
+    //background: rgba(255,255,255,0.7);
+    //margin-right: 90px;
+  //float: left;
+  text-align: left;
+  padding: 5px 0 0 10px;
+  font-family: 'Cambria', sans-serif;
+  text-transform:uppercase;
+  font-size:30px;
+  color:#000;
+  /*margin-bottom:20px;*/
+  /*height:85px;*/
+  text-align:center;
+  text-shadow: 0px 1px 1px #e4ebe9;
+  @include transition(1s, all);
+}
+
+body {
+  @include background-image(linear-gradient(left, #161616, #422537, #161616));
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("pattern.png");
+}
+
+.logo {
+  margin: 0 auto;
+  background: url("logo.png");
+  width: 506px;
+  height: 220px;
+}
+
+.ca-item-main {
+  @include box-shadow(#000 2px 2px 5px, #fff 0 0 10px inset, #fff 0 0 1px inset);
+  @include transition-property(all);
+  @include transition-duration(0.5s);
+  @include border-radius(3px);
+}
+
+.ca-item-main:hover {
+  @include box-shadow(#000 2px 2px 5px 1px, #fff 0 0 15px 1px inset, #fff 0 0 3px 2px inset);
+}
+
+.text-box {
+  background: rgba(255,255,255,0.7);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.ca-more {
+  @include border-radius(3px 0 0 3px);
+  cursor: pointer;
+  position: absolute;
+  bottom: 16px;
+  right:0px;
+  /*line-height: 20px;*/
+  padding:7px;
+  /*font-weight:bold;*/
+  background: #f1a40d;
+  text-align:center;
+  color: white;
+  font-family: "Georgia","Times New Roman",serif;
+  font-style:italic;
+  text-shadow:1px 1px 1px #897c63;
+}
+
+.ca-content-wrapper{
+  $bgc: #d48b3d;
+  background: $bgc;
+  $bgc-d: darken($bgc, 30%);
+  position:absolute;
+  width:0px; /* expands to width of the wrapper minus 1 element */
+  height:440px;
+  top:5px;
+  text-align:left;
+  z-index:10000;
+  overflow:hidden;
+  @include box-shadow($bgc-d 0 0 15px 1px inset, $bgc-d 0 0 3px 2px inset);
+  @include border-radius(0 5px 5px 0);
+}
