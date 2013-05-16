@@ -77,6 +77,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.0)
     kgio (2.8.0)
+    libv8 (3.11.8.17)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -118,6 +119,7 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.4)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -144,6 +146,9 @@ GEM
       compass (>= 0.12.2)
       sass (>= 3.2.0)
     temple (0.3.5)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.18.1)
     tilt (1.4.1)
     treetop (1.4.12)
@@ -172,6 +177,7 @@ DEPENDENCIES
   compass-rails
   compass-susy-plugin
   devise
+  execjs
   jquery-rails
   multi_json
   rails (= 3.2.11)
@@ -180,5 +186,6 @@ DEPENDENCIES
   slim-rails
   sqlite3
   susy
+  therubyracer
   uglifier (>= 1.0.3)
   unicorn
