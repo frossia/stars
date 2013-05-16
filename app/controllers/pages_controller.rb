@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   end
 
+  def tst
+    @tst = 'OK!'
+  end
+
 end
