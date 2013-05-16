@@ -180,7 +180,6 @@ DEPENDENCIES
   execjs
   jquery-rails
   multi_json
-  rack
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sassy-buttons
